@@ -2,7 +2,7 @@ import React from "react";
 import {ListGroup,ListGroupItem} from "reactstrap";
 import{FaCheckDouble} from "react-icons/fa";
 
-const todos=({ls_todo,Mmark_flag})=>
+const Todos=({ls_todo,mark_flag})=>
 {
     return(
         <ListGroup className="mt-5 mb-2 items">
@@ -11,7 +11,7 @@ const todos=({ls_todo,Mmark_flag})=>
                     <ListGroupItem key={t.id}>
                         {t.todoStr}
                         <span className="float-right"
-                        onClick={()=>{markComplete(t.id)}}><FaCheckDouble/></span>
+                        onClick={()=>{mark_flag(t.id)}}><FaCheckDouble/></span>
                     </ListGroupItem>
                 )
                 )
@@ -19,4 +19,4 @@ const todos=({ls_todo,Mmark_flag})=>
         </ListGroup>
     );
 }
-export default todos;
+export default Todos;
